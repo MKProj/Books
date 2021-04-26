@@ -171,6 +171,65 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="basic-workflows-in-git"><a class="header" href="#basic-workflows-in-git">Basic Workflows in Git</a></h1>
+<hr />
+<h2 id="initializing-a-repo"><a class="header" href="#initializing-a-repo">Initializing a Repo</a></h2>
+<p>To start a git repository, you must first initialize the directory in which the project is located in. To do this 
+you will need to use the <code>git init</code> command on the terminal (Mac/Linux) or command prompt (Windows). This command 
+creates a <code>.git</code> folder that contains all the tools and data necessary to contain various versions of our project. </p>
+<h2 id="adding-changes"><a class="header" href="#adding-changes">Adding Changes</a></h2>
+<p>To add a file's changes to the staging area, you will need to use the <code>git add</code> command, and use it 
+like the following:</p>
+<pre><code class="language-bash">$ git add &lt;file&gt;
+</code></pre>
+<p>If you want to add all the files, then use the wildcard, <code>git add *</code>. </p>
+<p>Now let's say there's files or directory you don't want added to the git repository (possibly build directories or large files), 
+you can create a <code>.gitignore</code> file, and in it add the files or directories you want ignored. </p>
+<pre><code># .gitignore example 
+example_directory/
+example.txt
+*.zip # this will ignore all zip files 
+</code></pre>
+<h2 id="committing-changes--status"><a class="header" href="#committing-changes--status">Committing Changes &amp; Status</a></h2>
+<p>So let's say you're satisfied with the changes you've made to the various files you've worked on. You could first see 
+which file has been changed, and/or changes been added, once you've added the files that's had their changes made, what now?
+Well when you add these files, they're in a staging area, to commit these changes to the repository, well it's exactly what you 
+think, use <code>git commit</code>. </p>
+<pre><code class="language-bash">git commit -m &quot;A nice message about the changes&quot; # Standard commit command 
+git commit -a -m &quot;A nice message&quot; # Adds and commits 
+</code></pre>
+<h2 id="differences--logs"><a class="header" href="#differences--logs">Differences &amp; Logs</a></h2>
+<p>Let's say you want to figure out the different changes between a file from the directory and the staging area version of the file, 
+well as straightforward the commands are, it is the <code>git diff</code> command, and all you need to do is <code>git diff &lt;file&gt;</code>. </p>
+<p>Now let's say you want to view the various commits that you've done in the git repository, use the <code>git log</code> command, and 
+it will show you the commits you've done with the following information: </p>
+<ul>
+<li>A 40-character code (SHA), that creates a unique id for the commit</li>
+<li>The commit author </li>
+<li>The date and time of which the commit occured </li>
+<li>The message written on the commit </li>
+</ul>
+<p>Here's an example of a git log done on this repo: </p>
+<pre><code class="language-bash">commit e5af29e89846a396690e9d73d771ef6b298ca1a0 (HEAD -&gt; main)
+Author: mustafif0929@gmail.com &lt;mustafif0929@gmail.com&gt;
+Date:   Thu Apr 22 22:37:33 2021 -0400
+
+    update
+
+commit 3fc278bcf2e74d151ead9192ef1991a235044c71 (origin/main)
+Author: mustafif0929@gmail.com &lt;mustafif0929@gmail.com&gt;
+Date:   Thu Apr 22 22:21:18 2021 -0400
+
+    first commit
+
+</code></pre>
+<h2 id="git-project-workflow"><a class="header" href="#git-project-workflow">Git Project Workflow</a></h2>
+<p>A Git Project contains three parts: </p>
+<ol>
+<li><strong>Working Directory</strong>: where files are created, edited, deleted and organized (worked on). </li>
+<li><strong>Staging Area</strong>: where changes that are made to the working directory is listed </li>
+<li><strong>Repository</strong>: where Git permanently stores changes as different versions of the project</li>
+</ol>
+<p>The Git workflow consists of editing files in the working directory, adding files to the staging area, and saving changes to a Git repository. </p>
 
                     </main>
 
@@ -209,21 +268,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

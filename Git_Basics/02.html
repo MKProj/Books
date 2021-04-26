@@ -171,6 +171,27 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="backtracking-in-git"><a class="header" href="#backtracking-in-git">Backtracking in Git</a></h1>
+<hr />
+<h2 id="showing-latest-commit-logs"><a class="header" href="#showing-latest-commit-logs">Showing Latest Commit Logs</a></h2>
+<p>In Git, the commit you are currently on is known as the <code>HEAD</code> commit. The <code>git show HEAD</code> command 
+will output everything the <code>git log</code> command display for the <code>HEAD</code> commit and all the file changes 
+that were made when committed. </p>
+<h2 id="reset-using-sha"><a class="header" href="#reset-using-sha">Reset Using SHA</a></h2>
+<p>Let's say you want to go back to a previous commit, how does one do that? Well you use the<br />
+<code>git reset commit_SHA</code> command, and what it does is set the <code>HEAD</code> commit to the <code>commit_SHA</code> commit. 
+To use <code>git reset</code>, you will need to use the first seven digits of the previous commit's 
+SHA, and that can be found using the <code>git log</code> command to see records of previous commits.</p>
+<h2 id="remove-file-from-staging"><a class="header" href="#remove-file-from-staging">Remove File from Staging</a></h2>
+<p>Let's say you've added a file's changes to the staging area, but you change your mind, you can do the 
+following, <code>git reset HEAD &lt;filename&gt;</code>, and what it does is remove the file from the staging area. </p>
+<p><code>Note: This does not discard changes made in the working directory</code></p>
+<p>You can use <code>git status</code> to make sure your file was properly removed from the staging area. </p>
+<h2 id="going-back-to-the-last-commit"><a class="header" href="#going-back-to-the-last-commit">Going Back to the Last Commit</a></h2>
+<p>Let's say you want to go back to the changes made in a file in your last commit, or the <code>HEAD</code> commit. 
+To do this, you can use <code>git checkout HEAD &lt;filename&gt;</code> and it will make the file in the working 
+directory to go back to the changes made in the last commit.</p>
+<p>You can make sure it worked by using <code>git diff</code> command to see if the rollback was successful. If
+nothing is outputted, that means it worked. </p>
 
                     </main>
 
@@ -209,21 +230,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

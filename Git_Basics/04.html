@@ -171,6 +171,109 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="teamwork-in-git"><a class="header" href="#teamwork-in-git">Teamwork in Git</a></h1>
+<hr />
+<h2 id="git-remote"><a class="header" href="#git-remote">Git Remote</a></h2>
+<p>When you work in a group, it is typical to collaborate with others using a Git server, or 
+a website like Github (highly recommended). </p>
+<p>A <code>remote</code> is essentially a shared Git repository that allows for multiple collaborators. 
+Now keep in mind collaborators work independently, and merge their changes when ready. </p>
+<h2 id="cloning-a-remote-repository"><a class="header" href="#cloning-a-remote-repository">Cloning a Remote Repository</a></h2>
+<p>Now how do you get to work on your partner's git repository...on let's say your organization's github? 
+Well why not clone the repository? </p>
+<p>You can use the <code>git clone</code> command.</p>
+<p>It works locally:</p>
+<pre><code class="language-bash">$ ls
+git-repository
+
+$ git clone git-project/ git-clone-project # git clone remote-repo output-directory(optional)
+Cloning into 'git-clone-project'...
+done. 
+
+$ ls
+git-clone-project git-project
+
+</code></pre>
+<p>It works on remote sites, such as Github:</p>
+<pre><code class="language-bash"># HTTP Clone
+$ git clone https://github.com/user/repo.git
+
+# SSH Clone
+$ git clone git@github.com:user/repo.git
+
+</code></pre>
+<h2 id="fetching-changes"><a class="header" href="#fetching-changes">Fetching Changes</a></h2>
+<p>The command <code>git fetch</code> downloads objects and changes from a remote repository <code>origin</code>. </p>
+<p>It however doesn't automatically merge these changes to your current branch, but instead 
+keeps all the changes in a new branch <code>origin/branch-name</code>. </p>
+<p>Now let's see this in action: </p>
+<pre><code class="language-bash">$ git branch
+* master
+
+$ git fetch
+remote: Counting objects: 3, done. 
+remote: Compressing objects: 100% (3/3), done. 
+remote: Total 3 (delta 1), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done. 
+From /home/user/git-project 
+* [new branch]      master     -&gt;  origin/master
+
+$ git branch
+* master
+  remotes/origin/master
+
+</code></pre>
+<p>To merge these changes, it's like last section, use the command <code>git merge</code> in the branch you want to have
+merge with the target branch. </p>
+<p>To merge the fetch changes for our example, we do <code>git merge origin/master</code> on branch <code>master</code>. </p>
+<h2 id="pushing-changes"><a class="header" href="#pushing-changes">Pushing Changes</a></h2>
+<p>In Git, the <code>git push origin branch-name</code> command pushes the branch <code>branch-name</code>, and all of the committed changes, to the remote <code>origin</code>. 
+This branch can now be reviewed and fetched by collaborators.</p>
+<h2 id="looking-at-the-remotes"><a class="header" href="#looking-at-the-remotes">Looking at the Remotes</a></h2>
+<p>In Git, the <code>git-remote -v</code> command returns a list of remote repositories that the current project is connected to.</p>
+<ul>
+<li>Git lists the name of the remote repository as well as its locations.</li>
+<li>Git automatically names this remote origin, because it refers to the remote repository of origin. 
+<ul>
+<li>However, it is possible to safely change its name.</li>
+</ul>
+</li>
+<li>The remote is listed twice: once for (fetch) and once for (push).</li>
+</ul>
+<pre><code class="language-bash">$ git-remote -v 
+origin  /home/user/git-project/
+(fetch)
+origin  /home/user/git-project/
+(push)
+
+</code></pre>
+<h2 id="a-typical-collaboration-workflow"><a class="header" href="#a-typical-collaboration-workflow">A Typical Collaboration Workflow</a></h2>
+<p>A typical collaboration workflow is:</p>
+<ol>
+<li>Fetch and merge changes from the remote</li>
+<li>Create a branch to work on a new project feature</li>
+<li>Develop the feature on a branch and commit the work</li>
+<li>Fetch and merge from the remote again (in case new commits were made)</li>
+<li>Push branch up to the remote for review</li>
+</ol>
+<p><strong>Note:</strong> Steps 1 and 4 are a safeguard against merge conflicts, which occur when two branches
+contain file changes that cannot be merged with the <code>git merge</code> command.</p>
+<p>Here's a bash script that can be made to ease the need of many commands: </p>
+<pre><code class="language-bash">#!/bin/bash
+git fetch
+git merge origin/master 
+
+echo &quot;New Branch Name: &quot;
+read branch
+
+git branch $branch
+git checkout $branch
+
+git fetch
+git merge origin/master
+
+git push -u origin $branch
+
+</code></pre>
 
                     </main>
 
@@ -201,21 +304,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         
