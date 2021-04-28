@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Loops - Kotlin Basics</title>
+        <title>Strings - Kotlin Basics</title>
         
         
 
@@ -98,7 +98,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="00.html">Getting Started</a></li><li class="chapter-item expanded "><a href="01-intro.html">Hello World Kotlin!</a></li><li class="chapter-item expanded "><a href="02-types.html">Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="02-01-var.html">Mutable &amp; Immutable Variables</a></li><li class="chapter-item expanded "><a href="02-02-str.html">Strings</a></li><li class="chapter-item expanded "><a href="02-03-math.html">Math</a></li></ol></li><li class="chapter-item expanded "><a href="03-conditionals.html">Conditional Expressions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="03-01-operators.html">Conditional Operators</a></li></ol></li><li class="chapter-item expanded "><a href="04-collections.html">Collections</a></li><li class="chapter-item expanded "><a href="05-loops.html" class="active">Loops</a></li><li class="chapter-item expanded "><a href="06-functions.html">Functions</a></li><li class="chapter-item expanded "><a href="07-classes.html">Classes</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="00.html">Getting Started</a></li><li class="chapter-item expanded "><a href="01-intro.html">Hello World Kotlin!</a></li><li class="chapter-item expanded "><a href="02-types.html">Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="02-01-var.html">Mutable &amp; Immutable Variables</a></li><li class="chapter-item expanded "><a href="02-02-str.html" class="active">Strings</a></li><li class="chapter-item expanded "><a href="02-03-math.html">Math</a></li></ol></li><li class="chapter-item expanded "><a href="03-conditionals.html">Conditional Expressions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="03-01-operators.html">Conditional Operators</a></li></ol></li><li class="chapter-item expanded "><a href="04-collections.html">Collections</a></li><li class="chapter-item expanded "><a href="05-loops.html">Loops</a></li><li class="chapter-item expanded "><a href="06-functions.html">Functions</a></li><li class="chapter-item expanded "><a href="07-classes.html">Classes</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -170,20 +170,43 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="loops"><a class="header" href="#loops">Loops</a></h1>
+                        <h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
+<p>Strings are essentially an array of characters, and in Java is not considered to be a primitive type, 
+however, Strings do have useful builtin properties that are good to take advantage of. </p>
+<p>Let's first talk about <code>String Concetation</code>, and we have seen it in a few times, and a good example to look at is this:</p>
+<pre><code>stm = stm + shape + &quot; is $area&quot; + &quot;\nThe volume of this &quot; + shape + &quot; is $volume&quot;
+</code></pre>
+<p>String Concetation is to combine Strings together with the <code>+</code> operator, and as you can see, it was useful for formatting 
+our statement with the various variables we had with us. </p>
+<p>Next is <code>String Templates</code>, which is also used in our example is useful to have variables in a String with <code>$variable</code> inside 
+the String to cleanly write the strings without needing to concetate a lot.</p>
+<p>In the ending of the program, we use a builtin String function called <code>.capatilize()</code> which served our purpose to capatalize 
+each word in a String. There is also <code>.length()</code> which returns the number of characters in a String. It is a good idea to explore 
+the various String properties that Kotlin offers. </p>
+<h2 id="character-escape-sequences"><a class="header" href="#character-escape-sequences">Character Escape Sequences</a></h2>
+<p>Character escape sequences consist of a backslash and character and are used to format text.</p>
+<ul>
+<li>\n Inserts a new line</li>
+<li>\t Inserts a tab</li>
+<li>\r Inserts a carriage return</li>
+<li>\' Inserts a single quote</li>
+<li>\&quot; Inserts a double quote</li>
+<li>\\ Inserts a backslash</li>
+<li>\$ Inserts the dollar symbol</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="04-collections.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="02-01-var.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="06-functions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="02-03-math.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -195,13 +218,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="04-collections.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="02-01-var.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="06-functions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="02-03-math.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

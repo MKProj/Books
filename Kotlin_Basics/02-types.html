@@ -98,7 +98,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="00.html">Getting Started</a></li><li class="chapter-item expanded "><a href="01-intro.html">Hello World Kotlin!</a></li><li class="chapter-item expanded "><a href="02-types.html" class="active">Data Types</a></li><li class="chapter-item expanded "><a href="03-conditionals.html">Conditionals</a></li><li class="chapter-item expanded "><a href="04-collections.html">Collections</a></li><li class="chapter-item expanded "><a href="05-loops.html">Loops</a></li><li class="chapter-item expanded "><a href="06-functions.html">Functions</a></li><li class="chapter-item expanded "><a href="07-classes.html">Classes</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="00.html">Getting Started</a></li><li class="chapter-item expanded "><a href="01-intro.html">Hello World Kotlin!</a></li><li class="chapter-item expanded "><a href="02-types.html" class="active">Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="02-01-var.html">Mutable &amp; Immutable Variables</a></li><li class="chapter-item expanded "><a href="02-02-str.html">Strings</a></li><li class="chapter-item expanded "><a href="02-03-math.html">Math</a></li></ol></li><li class="chapter-item expanded "><a href="03-conditionals.html">Conditional Expressions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="03-01-operators.html">Conditional Operators</a></li></ol></li><li class="chapter-item expanded "><a href="04-collections.html">Collections</a></li><li class="chapter-item expanded "><a href="05-loops.html">Loops</a></li><li class="chapter-item expanded "><a href="06-functions.html">Functions</a></li><li class="chapter-item expanded "><a href="07-classes.html">Classes</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -171,6 +171,42 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="data-types"><a class="header" href="#data-types">Data Types</a></h1>
+<p>We will begin this section off by disecting this example program that contains most topics that will be discussed: </p>
+<pre><code class="language-kotlin">fun main(){
+    /*
+     Our goal is to be able to have variables that 
+     calculate various geometric areas
+     */ 
+
+    // An immutable variable for the value of pi
+    val pi = 3.14159
+
+    var radius = 10.0
+    var area = pi * radius // Circle 
+
+    //Since we will be using the area statement a lot
+    //it's good to make it a variables 
+
+    var stm = &quot;The area of this &quot;
+    var shape = &quot;circle&quot;
+
+    println(stm + shape + &quot; is $area&quot;) // String Concetation + Template 
+
+    // Now let's say we want to find the area and volume of a square 
+    var length = 56.21
+
+    area = Math.pow(length, 2.00) // Will square the length
+    var volume = Math.pow(length, 3.00) // Will cube the length
+
+    // Now to prepare this statement 
+    // However I want each beginning letter of each word capatalized 
+
+    shape = &quot;square&quot;
+    stm = stm + shape + &quot; is $area&quot; + &quot;\nThe volume of this &quot; + shape + &quot; is $volume&quot;
+    println(stm.capitalize())
+
+}
+</code></pre>
 
                     </main>
 
@@ -183,7 +219,7 @@
                         
 
                         
-                            <a rel="next" href="03-conditionals.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="02-01-var.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -201,7 +237,7 @@
                 
 
                 
-                    <a rel="next" href="03-conditionals.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="02-01-var.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -209,6 +245,21 @@
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         
