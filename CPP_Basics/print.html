@@ -243,9 +243,209 @@ $ ./a.out
 Hello World
 </code></pre>
 <h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>A variable refers to a storage location in the computer’s memory that one can set aside to save, retrieve, and manipulate data.</p>
+<p>To initialize a variable in C++, you must first declare it's data type (will be discussed next), a name for the variable 
+and assigned a value with the assignment operator <code>=</code>. </p>
+<p>Ex. <code>int var = 10; // data_type name = value; </code></p>
+<p>Variables can also be declared uninitialized, this means it doesn't have a value yet, and this is done by not adding an 
+assignment value. </p>
+<p>Ex. <code>int var;</code></p>
+<h2 id="data-types"><a class="header" href="#data-types">Data Types</a></h2>
+<p>In C++, there are 4 primitive data types, these are integers (<code>int</code>), double floating point (<code>double</code>), 
+characters (<code>char</code>), and boolean (<code>bool</code>). As well as a common data type used along the primitive type is strings(<code>std::string</code>). </p>
+<h3 id="integers"><a class="header" href="#integers">Integers</a></h3>
+<p>The integer data type is a- non-decimal number that can be positive or negative. An integer variable 
+is declared with the <code>int</code> keyword, and keep in mind it can not be manipulated along the double data type. 
+An integer typically requires 4 bytes of memory space and ranges from -2³¹ to 2³¹.<br />
+Ex. <code>int foo = 89</code></p>
+<h3 id="doubles"><a class="header" href="#doubles">Doubles</a></h3>
+<p>The double data type is a decimal point number requiring 8 bytes of memory, and is declared using 
+the <code>double</code> keyword.<br />
+Ex. <code>double foo = 0.78</code></p>
+<h3 id="characters"><a class="header" href="#characters">Characters</a></h3>
+<p>The character data type is a single character that is wrapped within single quotes <code>' '</code>. They typically 
+require 1 byte of memory, and is declared by the <code>char</code> keyword. 
+Ex. <code>char letter = 'A'</code></p>
+<h3 id="strings"><a class="header" href="#strings">Strings</a></h3>
+<p>Strings are an array of characters and are wrapped within double quotes <code>&quot; &quot;</code>. To declare a string 
+you will need to use <code>std::string</code>.<br />
+Ex. <code>std::string word = &quot;hello&quot;;</code></p>
+<h3 id="boolean"><a class="header" href="#boolean">Boolean</a></h3>
+<p>A boolean data type is a value that is either <code>true</code> or <code>false</code>, and is declared using the <code>bool</code> keyword 
+Ex. <code>bool condition = true</code></p>
+<h2 id="arithmetic-operations"><a class="header" href="#arithmetic-operations">Arithmetic Operations</a></h2>
+<p>C++ supports different types of arithmetic operators that can perform common mathematical operations:</p>
+<ul>
+<li><code>+</code> addition</li>
+<li><code>-</code> subtraction</li>
+<li><code>*</code> multiplication</li>
+<li><code>/</code> division</li>
+<li><code>%</code> modulo (yields the remainder)</li>
+</ul>
+<h2 id="user-input"><a class="header" href="#user-input">User Input</a></h2>
+<p><code>std::cin</code> which stands for “character input”, reads user input from the keyboard.</p>
+<p>Here, the user can enter a number, press <code>enter</code>, and that number will get stored in <code>tip</code>.</p>
+<pre><code class="language-c++">int tip = 0;
+ 
+std::cout &lt;&lt; &quot;Enter amount: &quot;;
+std::cin &gt;&gt; tip;
+</code></pre>
 <h1 id="conditionals--logic"><a class="header" href="#conditionals--logic">Conditionals &amp; Logic</a></h1>
+<h2 id="if-statement"><a class="header" href="#if-statement">if Statement</a></h2>
+<p>An <code>if</code> statement is used to test an expression for truth.</p>
+<p>If the condition evaluates to true, then the code within the block is executed;<br />
+otherwise, it will be skipped.</p>
+<pre><code class="language-c++">if (a == 10) {
+  // Code goes here
+}
+</code></pre>
+<h2 id="else-clause"><a class="header" href="#else-clause">else Clause</a></h2>
+<p>An <code>else</code> clause can be added to an if statement.</p>
+<ul>
+<li>If the condition evaluates to true, code in the if part is executed.</li>
+<li>If the condition evaluates to false, code in the else part is executed.</li>
+</ul>
+<pre><code class="language-c++">if (year == 1991) {
+  // This runs if it is true
+}
+else {
+  // This runs if it is false
+}
+</code></pre>
+<h2 id="else-if-statement"><a class="header" href="#else-if-statement">else if Statement</a></h2>
+<p>One or more <code>else if</code> statements can be added in between the if and else to provide additional condition(s) to check.</p>
+<pre><code class="language-c++">if (apple &gt; 8) {
+  // Some code here
+}
+else if (apple &gt; 6) {
+  // Some code here
+}
+else {
+  // Some code here
+}
+</code></pre>
+<h2 id="switch-statement"><a class="header" href="#switch-statement">switch Statement</a></h2>
+<p>A <code>switch</code> statement provides a means of checking an expression against various cases.</p>
+<ul>
+<li>If there is a match, the code within starts to execute. </li>
+<li>The <code>break</code> keyword can be used to terminate a case.</li>
+<li><code>default</code> is executed when no case matches.</li>
+</ul>
+<pre><code class="language-c++">switch (grade) {
+  case 9:
+    std::cout &lt;&lt; &quot;Freshman\n&quot;;
+    break;
+  case 10:
+    std::cout &lt;&lt; &quot;Sophomore\n&quot;;
+    break;
+  case 11:
+    std::cout &lt;&lt; &quot;Junior\n&quot;;
+    break;
+  case 12:
+    std::cout &lt;&lt; &quot;Senior\n&quot;;
+    break;
+  default:
+    std::cout &lt;&lt; &quot;Invalid\n&quot;;
+    break;
+}
+</code></pre>
+<h2 id="relational-operators"><a class="header" href="#relational-operators">Relational Operators</a></h2>
+<p>Relational operators are used to compare two values and return true or false depending on the comparison:</p>
+<ul>
+<li><code>==</code> equal to</li>
+<li><code>!=</code> not equal to</li>
+<li><code>&gt;</code>greater than</li>
+<li><code>&lt;</code> less than</li>
+<li><code>&gt;=</code> greater than or equal to</li>
+<li><code>&lt;=</code> less than or equal to</li>
+</ul>
+<h2 id="logical-operators"><a class="header" href="#logical-operators">Logical Operators</a></h2>
+<p>Logical operators can be used to combine two different conditions.</p>
+<ul>
+<li><code>&amp;&amp;</code> requires both to be true (and)</li>
+<li><code>||</code> requires either to be true (or)</li>
+<li><code>!</code> negates the result (not)</li>
+</ul>
 <h1 id="loops"><a class="header" href="#loops">Loops</a></h1>
+<h2 id="while-loop"><a class="header" href="#while-loop">while Loop</a></h2>
+<p>A <code>while</code> loop statement repeatedly executes the code block within as long as the condition is true. 
+The moment the condition becomes false, the program will exit the loop.</p>
+<p>Note that the while loop might not ever run. If the condition is false initially, the code block will be skipped.</p>
+<pre><code class="language-c++">while (password != 1234) {
+ 
+  std::cout &lt;&lt; &quot;Try again: &quot;;
+  std::cin &gt;&gt; password;
+ 
+}
+</code></pre>
+<h2 id="for-loop"><a class="header" href="#for-loop">for Loop</a></h2>
+<p>A <code>for</code> loop executes a code block a specific number of times. It has three parts:</p>
+<ul>
+<li>The initialization of a counter (<code>int i = 0</code>)</li>
+<li>The continue condition (<code>i &lt; 10</code>)</li>
+<li>The increment/decrement of the counter (<code>i++</code>)</li>
+</ul>
+<p>This example prints 0 to 9 on the screen.</p>
+<pre><code class="language-c++">for (int i = 0; i &lt; 10; i++) {
+  
+  std::cout &lt;&lt; i &lt;&lt; &quot;\n&quot;;
+  
+}
+</code></pre>
 <h1 id="vectors"><a class="header" href="#vectors">Vectors</a></h1>
+<p>In C++, a vector is a dynamic list of items, that can shrink and grow in size. 
+It is created using <code>std::vector&lt;type&gt; name;</code> and it can only store values of the same type.</p>
+<p>To use vectors, it is necessary to <code>#include</code> the vector library</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+ 
+int main() {
+  
+  std::vector&lt;int&gt; grades(3);
+  
+  grades[0] = 90;
+  grades[1] = 86;
+  grades[2] = 98;
+  
+}
+</code></pre>
+<p>During the creation of a C++ vector, the data type of its elements must be specified. Once the vector is created, the type cannot be changed.</p>
+<h2 id="index"><a class="header" href="#index">Index</a></h2>
+<p>An index refers to an element’s position within an ordered list, like a vector or an array. The first element has an index of <code>0</code>.</p>
+<p>A specific element in a vector or an array can be accessed using its index, like <code>name[index]</code>.</p>
+<pre><code class="language-c++">std::vector&lt;int&gt; grades = {65, 78, 90, 85}
+
+std::cout &lt;&lt; grades[2];
+// Outputs: 90
+</code></pre>
+<h2 id="vector-sizes"><a class="header" href="#vector-sizes">Vector Sizes</a></h2>
+<p>The <code>.size()</code> function can be used to return the number of elements in a vector, like <code>name.size()</code>.</p>
+<pre><code class="language-c++">std::vector&lt;std::string&gt; employees;
+ 
+employees.push_back(&quot;michael&quot;);
+employees.push_back(&quot;jim&quot;);
+employees.push_back(&quot;pam&quot;);
+employees.push_back(&quot;dwight&quot;);
+ 
+std::cout &lt;&lt; employees.size();
+// Prints: 4
+</code></pre>
+<h2 id="push-and-pop"><a class="header" href="#push-and-pop">Push and Pop</a></h2>
+<p>The following functions can be used to add and remove an element in a vector:</p>
+<ul>
+<li><code>.push_back()</code> to add an element to the “end” of a vector</li>
+<li><code>.pop_back()</code> to remove an element from the “end” of a vector</li>
+</ul>
+<pre><code class="language-c++">std::vector&lt;std::string&gt; wishlist;
+ 
+wishlist.push_back(&quot;GTX 3090&quot;);
+wishlist.push_back(&quot;Ryzen 5 5600&quot;);
+ 
+wishlist.pop_back();
+ 
+std::cout &lt;&lt; wishlist.size(); 
+// Prints: 1
+</code></pre>
 <h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
 <h1 id="classes--objects"><a class="header" href="#classes--objects">Classes &amp; Objects</a></h1>
 <h1 id="references--pointers"><a class="header" href="#references--pointers">References &amp; Pointers</a></h1>

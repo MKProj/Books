@@ -171,6 +171,81 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="conditionals--logic"><a class="header" href="#conditionals--logic">Conditionals &amp; Logic</a></h1>
+<h2 id="if-statement"><a class="header" href="#if-statement">if Statement</a></h2>
+<p>An <code>if</code> statement is used to test an expression for truth.</p>
+<p>If the condition evaluates to true, then the code within the block is executed;<br />
+otherwise, it will be skipped.</p>
+<pre><code class="language-c++">if (a == 10) {
+  // Code goes here
+}
+</code></pre>
+<h2 id="else-clause"><a class="header" href="#else-clause">else Clause</a></h2>
+<p>An <code>else</code> clause can be added to an if statement.</p>
+<ul>
+<li>If the condition evaluates to true, code in the if part is executed.</li>
+<li>If the condition evaluates to false, code in the else part is executed.</li>
+</ul>
+<pre><code class="language-c++">if (year == 1991) {
+  // This runs if it is true
+}
+else {
+  // This runs if it is false
+}
+</code></pre>
+<h2 id="else-if-statement"><a class="header" href="#else-if-statement">else if Statement</a></h2>
+<p>One or more <code>else if</code> statements can be added in between the if and else to provide additional condition(s) to check.</p>
+<pre><code class="language-c++">if (apple &gt; 8) {
+  // Some code here
+}
+else if (apple &gt; 6) {
+  // Some code here
+}
+else {
+  // Some code here
+}
+</code></pre>
+<h2 id="switch-statement"><a class="header" href="#switch-statement">switch Statement</a></h2>
+<p>A <code>switch</code> statement provides a means of checking an expression against various cases.</p>
+<ul>
+<li>If there is a match, the code within starts to execute. </li>
+<li>The <code>break</code> keyword can be used to terminate a case.</li>
+<li><code>default</code> is executed when no case matches.</li>
+</ul>
+<pre><code class="language-c++">switch (grade) {
+  case 9:
+    std::cout &lt;&lt; &quot;Freshman\n&quot;;
+    break;
+  case 10:
+    std::cout &lt;&lt; &quot;Sophomore\n&quot;;
+    break;
+  case 11:
+    std::cout &lt;&lt; &quot;Junior\n&quot;;
+    break;
+  case 12:
+    std::cout &lt;&lt; &quot;Senior\n&quot;;
+    break;
+  default:
+    std::cout &lt;&lt; &quot;Invalid\n&quot;;
+    break;
+}
+</code></pre>
+<h2 id="relational-operators"><a class="header" href="#relational-operators">Relational Operators</a></h2>
+<p>Relational operators are used to compare two values and return true or false depending on the comparison:</p>
+<ul>
+<li><code>==</code> equal to</li>
+<li><code>!=</code> not equal to</li>
+<li><code>&gt;</code>greater than</li>
+<li><code>&lt;</code> less than</li>
+<li><code>&gt;=</code> greater than or equal to</li>
+<li><code>&lt;=</code> less than or equal to</li>
+</ul>
+<h2 id="logical-operators"><a class="header" href="#logical-operators">Logical Operators</a></h2>
+<p>Logical operators can be used to combine two different conditions.</p>
+<ul>
+<li><code>&amp;&amp;</code> requires both to be true (and)</li>
+<li><code>||</code> requires either to be true (or)</li>
+<li><code>!</code> negates the result (not)</li>
+</ul>
 
                     </main>
 

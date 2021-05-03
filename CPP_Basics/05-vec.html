@@ -171,6 +171,59 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="vectors"><a class="header" href="#vectors">Vectors</a></h1>
+<p>In C++, a vector is a dynamic list of items, that can shrink and grow in size. 
+It is created using <code>std::vector&lt;type&gt; name;</code> and it can only store values of the same type.</p>
+<p>To use vectors, it is necessary to <code>#include</code> the vector library</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+ 
+int main() {
+  
+  std::vector&lt;int&gt; grades(3);
+  
+  grades[0] = 90;
+  grades[1] = 86;
+  grades[2] = 98;
+  
+}
+</code></pre>
+<p>During the creation of a C++ vector, the data type of its elements must be specified. Once the vector is created, the type cannot be changed.</p>
+<h2 id="index"><a class="header" href="#index">Index</a></h2>
+<p>An index refers to an element’s position within an ordered list, like a vector or an array. The first element has an index of <code>0</code>.</p>
+<p>A specific element in a vector or an array can be accessed using its index, like <code>name[index]</code>.</p>
+<pre><code class="language-c++">std::vector&lt;int&gt; grades = {65, 78, 90, 85}
+
+std::cout &lt;&lt; grades[2];
+// Outputs: 90
+</code></pre>
+<h2 id="vector-sizes"><a class="header" href="#vector-sizes">Vector Sizes</a></h2>
+<p>The <code>.size()</code> function can be used to return the number of elements in a vector, like <code>name.size()</code>.</p>
+<pre><code class="language-c++">std::vector&lt;std::string&gt; employees;
+ 
+employees.push_back(&quot;michael&quot;);
+employees.push_back(&quot;jim&quot;);
+employees.push_back(&quot;pam&quot;);
+employees.push_back(&quot;dwight&quot;);
+ 
+std::cout &lt;&lt; employees.size();
+// Prints: 4
+</code></pre>
+<h2 id="push-and-pop"><a class="header" href="#push-and-pop">Push and Pop</a></h2>
+<p>The following functions can be used to add and remove an element in a vector:</p>
+<ul>
+<li><code>.push_back()</code> to add an element to the “end” of a vector</li>
+<li><code>.pop_back()</code> to remove an element from the “end” of a vector</li>
+</ul>
+<pre><code class="language-c++">std::vector&lt;std::string&gt; wishlist;
+ 
+wishlist.push_back(&quot;GTX 3090&quot;);
+wishlist.push_back(&quot;Ryzen 5 5600&quot;);
+ 
+wishlist.pop_back();
+ 
+std::cout &lt;&lt; wishlist.size(); 
+// Prints: 1
+</code></pre>
 
                     </main>
 

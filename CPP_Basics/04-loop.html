@@ -171,6 +171,31 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="loops"><a class="header" href="#loops">Loops</a></h1>
+<h2 id="while-loop"><a class="header" href="#while-loop">while Loop</a></h2>
+<p>A <code>while</code> loop statement repeatedly executes the code block within as long as the condition is true. 
+The moment the condition becomes false, the program will exit the loop.</p>
+<p>Note that the while loop might not ever run. If the condition is false initially, the code block will be skipped.</p>
+<pre><code class="language-c++">while (password != 1234) {
+ 
+  std::cout &lt;&lt; &quot;Try again: &quot;;
+  std::cin &gt;&gt; password;
+ 
+}
+</code></pre>
+<h2 id="for-loop"><a class="header" href="#for-loop">for Loop</a></h2>
+<p>A <code>for</code> loop executes a code block a specific number of times. It has three parts:</p>
+<ul>
+<li>The initialization of a counter (<code>int i = 0</code>)</li>
+<li>The continue condition (<code>i &lt; 10</code>)</li>
+<li>The increment/decrement of the counter (<code>i++</code>)</li>
+</ul>
+<p>This example prints 0 to 9 on the screen.</p>
+<pre><code class="language-c++">for (int i = 0; i &lt; 10; i++) {
+  
+  std::cout &lt;&lt; i &lt;&lt; &quot;\n&quot;;
+  
+}
+</code></pre>
 
                     </main>
 
