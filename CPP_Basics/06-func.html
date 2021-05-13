@@ -171,6 +171,82 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
+<p>A <em>function</em> is a set of statements that are executed together when the function is called. Every function has a name, which is used to call the respective function.</p>
+<p>A C++ function has two parts:</p>
+<ul>
+<li>Function declaration</li>
+<li>Function definition
+The declaration includes the function’s name, return type, and any parameters.</li>
+</ul>
+<p>The definition is the actual body of the function which executes when a function is called. The body of a function is typically enclosed in curly braces.</p>
+<p>A function can look like the example below:</p>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+void hello(); //Function Declaration 
+
+int main(){
+    hello(); //Function call
+    // Prints Hello!
+}
+
+void hello(){ //Function Definition
+    std::cout &lt;&lt; &quot;Hello!&quot;;
+}
+</code></pre>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<p>Function parameters are placeholders for values passed to the function. They act as variables inside a function.
+They are placed in the parantheses in the function declaration, <code>int add(int a, int b)</code>. </p>
+<p>Consider the example below: </p>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+void print_int(int i);
+
+int main(){
+    print_int(10); //Passes the value of 10 to the parameter i
+    //Prints 10
+}
+
+void print_int(int i){
+    std::cout &lt;&lt; i;
+}
+</code></pre>
+<h2 id="return-values"><a class="header" href="#return-values">Return Values</a></h2>
+<p>A function that returns a value must have a <code>return</code> statement. The data type of the return value also must match the method’s declared return type.</p>
+<p>On the other hand, a <code>void</code> function (one that does not return anything) does not require a return statement.</p>
+<p>Consider the example below: </p>
+<pre><code class="language-c++">int add(int a, int b);
+
+int main(){
+   int sum = add(6, 8); // sum = 14
+    
+}
+
+void add(int a, int b){
+    return a+b;
+}
+
+</code></pre>
+<h2 id="scope"><a class="header" href="#scope">Scope</a></h2>
+<p>The scope is the region of code that can access or view a given element:</p>
+<ul>
+<li>Variables defined in global scope are accessible throughout the program.</li>
+<li>Variables defined in a function have local scope and are only accessible inside the function.</li>
+</ul>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+ 
+void print();
+ 
+int i = 10;       // global variable
+ 
+int main() { 
+  std::cout &lt;&lt; i &lt;&lt; &quot;\n&quot;; 
+}
+ 
+void print() { 
+  int j = 0;      // local variable
+  i = 20;
+  std::cout &lt;&lt; i &lt;&lt; &quot;\n&quot;; 
+  std::cout &lt;&lt; j &lt;&lt; &quot;\n&quot;;
+}
+</code></pre>
 
                     </main>
 
