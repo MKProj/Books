@@ -188,23 +188,59 @@ class Summon{
     //Private Methods:
     private:
     int what_dmg(Summon s){ //Finds dmg of a perticular summon
-        if s.type == 'T'{
+        if (s.type == 'T'){
             return (s.tier * 2 ) - 1; 
-        } else if s.type == 'S' {
+        } else (if s.type == 'S') {
             return s.tier * 2;
         } else {
             return 0;
         }
     }
 
+    std::string what_type(Summon s){
+        if (s.type == 'T'){
+            return &quot;Tech&quot;; 
+        } else if (s.type == 'S'){
+            return &quot;Striker&quot;;
+        }
+
+    }
+
     //Public Methods: 
     public: 
     void info(Summon s){
-        std::cout &lt;&lt; 
+        std::cout  &lt;&lt; &quot;Name: &quot;&lt;&lt; s.name &lt;&lt; &quot;\n&quot; &lt;&lt; &quot;Type: &quot; &lt;&lt; what_type(s) &lt;&lt; &quot;\n&quot; 
+        &lt;&lt; &quot;Dmg: &quot; &lt;&lt; what_dmg(s) &lt;&lt; &quot;\n&quot; &lt;&lt; s.description &lt;&lt; std::endl;
     }
 };
 
 </code></pre>
+<h2 id="class-members"><a class="header" href="#class-members">Class Members</a></h2>
+<p>A class is comprised of class members:</p>
+<ul>
+<li>Attributes, also known as member data, consist of information about an instance of the class.</li>
+<li>Methods, also known as member functions, are functions that can be used with an instance of the class.</li>
+</ul>
+<p>This can be seen in our program above, things like <code>char type;</code> or <code>int tier;</code> are all class attributes. 
+Our class methods were split into <code>private</code> and <code>public</code> methods <em>(talked in Access Control below)</em>, and are 
+such things like <code>what_dmg</code> or <code>info</code>. </p>
+<h3 id="objects"><a class="header" href="#objects">Objects</a></h3>
+<p>In C++, an object is an instance of a class that encapsulates data and functionality pertaining to that data.
+This can be in our functions like <code>what_type(Summon s)</code> that uses the object <code>Summon s</code>. </p>
+<h2 id="constructor"><a class="header" href="#constructor">Constructor</a></h2>
+<p>For a C++ class, a constructor is a special kind of method that enables control regarding how the objects of a class should be created. 
+Different class constructors can be specified for the same class, but each constructor signature must be unique.</p>
+<p>We have a constructor in our class, and is seen as <code>Summon(std::string name, char type, int tier, std::string description)</code>, and 
+what it means is that to initialize a Summon instance, you must have the following. </p>
+<h2 id="access-control"><a class="header" href="#access-control">Access Control</a></h2>
+<p>C++ classes have access control operators that designate the scope of class members:</p>
+<ul>
+<li><code>public</code></li>
+<li><code>private</code></li>
+</ul>
+<p><code>public</code> members are accessible everywhere; <code>private</code> members can only be accessed from within the same instance of the class or from friends classes.</p>
+<p>You can see this when we don't want people to use our <code>what_dmg</code> or <code>what_type</code> functions, so we can avoid that 
+by making those private, while info will be public, and use these private functions. </p>
 
                     </main>
 

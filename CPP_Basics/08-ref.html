@@ -171,6 +171,65 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="references--pointers"><a class="header" href="#references--pointers">References &amp; Pointers</a></h1>
+<h2 id="memory-address"><a class="header" href="#memory-address">Memory Address</a></h2>
+<p>In C++, the memory address is the location in the memory of an object. It can be accessed with the &quot;address of&quot; operator, <code>&amp;</code>.</p>
+<p>Given a variable <code>random_var</code> the memory address can be retrieved by printing out <code>&amp;random_var</code>. It will return something like: <code>0x7ffd7caa5b54</code>.</p>
+<h2 id="pointers"><a class="header" href="#pointers">Pointers</a></h2>
+<p>In C++, a pointer variable stores the memory address of something else.<br />
+It is created using the <code>*</code> sign.<br />
+Example: <code>int* pointer = &amp;gum; //Gets address of something like 0x3fed7c9a8b578</code></p>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<p>In C++, a reference variable is an alias for another object. It is created using the <code>&amp;</code> sign. Two things to note:</p>
+<ol>
+<li>Anything done to the reference also happens to the original.</li>
+<li>Aliases cannot be changed to alias something else.</li>
+</ol>
+<p>Example: <code>int &amp;a = b; //Now a shares the same address as b</code></p>
+<h2 id="pass-by-reference"><a class="header" href="#pass-by-reference">Pass-By-Reference</a></h2>
+<p>In C++, pass-by-reference refers to passing parameters to a function by using references.</p>
+<p>It allows the ability to:</p>
+<ul>
+<li>Modify the value of the function arguments.</li>
+<li>Avoid making copies of a variable/object for performance reasons.</li>
+</ul>
+<pre><code class="language-c++">void swap_num(int &amp;i, int &amp;j) {
+ 
+  int temp = i;
+  i = j;
+  j = temp;
+ 
+}
+ 
+int main() {
+ 
+  int a = 100;
+  int b = 200;
+ 
+  swap_num(a, b);
+ 
+  std::cout &lt;&lt; &quot;A is &quot; &lt;&lt; a &lt;&lt; &quot;\n&quot;; //Prints 200
+  std::cout &lt;&lt; &quot;B is &quot; &lt;&lt; b &lt;&lt; &quot;\n&quot;; //Prints 100
+}
+</code></pre>
+<h2 id="const-reference"><a class="header" href="#const-reference">const Reference</a></h2>
+<p>In C++, pass-by-reference with <code>const</code> can be used for a function where the parameter(s) won’t change inside the function.</p>
+<p>This saves the computational cost of making a copy of the argument.</p>
+<pre><code class="language-c++">int triple(int const &amp;i) {
+ 
+  return i * 3;
+ 
+}
+</code></pre>
+<h2 id="dereference"><a class="header" href="#dereference">Dereference</a></h2>
+<p>In C++, a dereference reference operator, <code>*</code>, can be used to obtain the value pointed to by a pointer variable.</p>
+<pre><code class="language-c++">int gum = 3;
+ 
+// * on left side is a pointer
+int* pointer = &amp;gum;
+ 
+// * on right side is a dereference of that pointer
+int dereference = *pointer;
+</code></pre>
 
                     </main>
 
