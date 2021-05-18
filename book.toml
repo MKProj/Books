@@ -1,0 +1,10 @@
+[book]
+authors = ["Mustafif"]
+language = "en"
+multilingual = false
+src = "src"
+title = "MKProject-Books"
+
+[output.html]
+site-url = "/book/"
+cname = "book.mkproj.com"
