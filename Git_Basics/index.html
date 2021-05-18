@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js ayu">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction to Git - Git Basics</title>
+        <title>Git - MKProject-Books</title>
         
         
 
@@ -18,42 +18,39 @@
         <meta name="theme-color" content="#ffffff" />
 
         
-        <link rel="icon" href="favicon.svg">
+        <link rel="icon" href="../favicon.svg">
         
         
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
         
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
         
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="stylesheet" href="../css/print.css" media="print">
         
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
 
         
-        <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
     </head>
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -79,7 +76,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('ayu')
+            html.classList.remove('light')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -98,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="00.html">Introduction to Git</a></li><li class="chapter-item expanded "><a href="01.html">Basic Workflows</a></li><li class="chapter-item expanded "><a href="02.html">Backtracking</a></li><li class="chapter-item expanded "><a href="03.html">Branching</a></li><li class="chapter-item expanded "><a href="04.html">Teamwork</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> MKProject Books</a></li><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Basics</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Git_Basics/index.html" class="active"><strong aria-hidden="true">2.1.</strong> Git</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -117,11 +114,11 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
                         
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -130,18 +127,14 @@
                         
                     </div>
 
-                    <h1 class="menu-title">Git Basics</h1>
+                    <h1 class="menu-title">MKProject-Books</h1>
 
                     <div class="right-buttons">
                         
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         
-                        
-                        <a href="//" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
                         
                     </div>
                 </div>
@@ -170,7 +163,176 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction-to-git"><a class="header" href="#introduction-to-git">Introduction to Git</a></h1>
+                        <!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction to Git - Git Basics</title>
+<pre><code>    &lt;!-- Custom HTML head --&gt;
+    
+
+
+    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#ffffff&quot; /&gt;
+
+    
+    &lt;link rel=&quot;icon&quot; href=&quot;favicon.svg&quot;&gt;
+    
+    
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.png&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/variables.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/general.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/chrome.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/print.css&quot; media=&quot;print&quot;&gt;
+    
+
+    &lt;!-- Fonts --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;FontAwesome/css/font-awesome.css&quot;&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;fonts/fonts.css&quot;&gt;
+    
+
+    &lt;!-- Highlight.js Stylesheets --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;highlight.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;tomorrow-night.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;ayu-highlight.css&quot;&gt;
+
+    &lt;!-- Custom theme stylesheets --&gt;
+    
+
+    
+    &lt;!-- MathJax --&gt;
+    &lt;script async type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Provide site root to javascript --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        var path_to_root = &quot;&quot;;
+        var default_theme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;).matches ? &quot;ayu&quot; : &quot;ayu&quot;;
+    &lt;/script&gt;
+
+    &lt;!-- Work around some values being stored in localStorage wrapped in quotes --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('&quot;') &amp;&amp; theme.endsWith('&quot;')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('&quot;') &amp;&amp; sidebar.endsWith('&quot;')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    &lt;/script&gt;
+
+    &lt;!-- Set the theme before any content is loaded, prevents flash --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('ayu')
+        html.classList.add(theme);
+        html.classList.add('js');
+    &lt;/script&gt;
+
+    &lt;!-- Hide / unhide sidebar before it is displayed --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth &gt;= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add(&quot;sidebar-&quot; + sidebar);
+    &lt;/script&gt;
+
+    &lt;nav id=&quot;sidebar&quot; class=&quot;sidebar&quot; aria-label=&quot;Table of contents&quot;&gt;
+        &lt;div class=&quot;sidebar-scrollbox&quot;&gt;
+            &lt;ol class=&quot;chapter&quot;&gt;&lt;li class=&quot;chapter-item expanded &quot;&gt;&lt;a href=&quot;00.html&quot;&gt;Introduction to Git&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;chapter-item expanded &quot;&gt;&lt;a href=&quot;01.html&quot;&gt;Basic Workflows&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;chapter-item expanded &quot;&gt;&lt;a href=&quot;02.html&quot;&gt;Backtracking&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;chapter-item expanded &quot;&gt;&lt;a href=&quot;03.html&quot;&gt;Branching&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;chapter-item expanded &quot;&gt;&lt;a href=&quot;04.html&quot;&gt;Teamwork&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;sidebar-resize-handle&quot; class=&quot;sidebar-resize-handle&quot;&gt;&lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div id=&quot;page-wrapper&quot; class=&quot;page-wrapper&quot;&gt;
+
+        &lt;div class=&quot;page&quot;&gt;
+            
+            &lt;div id=&quot;menu-bar-hover-placeholder&quot;&gt;&lt;/div&gt;
+            &lt;div id=&quot;menu-bar&quot; class=&quot;menu-bar sticky bordered&quot;&gt;
+                &lt;div class=&quot;left-buttons&quot;&gt;
+                    &lt;button id=&quot;sidebar-toggle&quot; class=&quot;icon-button&quot; type=&quot;button&quot; title=&quot;Toggle Table of Contents&quot; aria-label=&quot;Toggle Table of Contents&quot; aria-controls=&quot;sidebar&quot;&gt;
+                        &lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button id=&quot;theme-toggle&quot; class=&quot;icon-button&quot; type=&quot;button&quot; title=&quot;Change theme&quot; aria-label=&quot;Change theme&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;theme-list&quot;&gt;
+                        &lt;i class=&quot;fa fa-paint-brush&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;ul id=&quot;theme-list&quot; class=&quot;theme-popup&quot; aria-label=&quot;Themes&quot; role=&quot;menu&quot;&gt;
+                        &lt;li role=&quot;none&quot;&gt;&lt;button role=&quot;menuitem&quot; class=&quot;theme&quot; id=&quot;light&quot;&gt;Light&lt;/button&gt;&lt;/li&gt;
+                        &lt;li role=&quot;none&quot;&gt;&lt;button role=&quot;menuitem&quot; class=&quot;theme&quot; id=&quot;rust&quot;&gt;Rust&lt;/button&gt;&lt;/li&gt;
+                        &lt;li role=&quot;none&quot;&gt;&lt;button role=&quot;menuitem&quot; class=&quot;theme&quot; id=&quot;coal&quot;&gt;Coal&lt;/button&gt;&lt;/li&gt;
+                        &lt;li role=&quot;none&quot;&gt;&lt;button role=&quot;menuitem&quot; class=&quot;theme&quot; id=&quot;navy&quot;&gt;Navy&lt;/button&gt;&lt;/li&gt;
+                        &lt;li role=&quot;none&quot;&gt;&lt;button role=&quot;menuitem&quot; class=&quot;theme&quot; id=&quot;ayu&quot;&gt;Ayu (default)&lt;/button&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                    
+                    &lt;button id=&quot;search-toggle&quot; class=&quot;icon-button&quot; type=&quot;button&quot; title=&quot;Search. (Shortkey: s)&quot; aria-label=&quot;Toggle Searchbar&quot; aria-expanded=&quot;false&quot; aria-keyshortcuts=&quot;S&quot; aria-controls=&quot;searchbar&quot;&gt;
+                        &lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    
+                &lt;/div&gt;
+
+                &lt;h1 class=&quot;menu-title&quot;&gt;Git Basics&lt;/h1&gt;
+
+                &lt;div class=&quot;right-buttons&quot;&gt;
+                    
+                    &lt;a href=&quot;print.html&quot; title=&quot;Print this book&quot; aria-label=&quot;Print this book&quot;&gt;
+                        &lt;i id=&quot;print-button&quot; class=&quot;fa fa-print&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    
+                    
+                    &lt;a href=&quot;//&quot; title=&quot;Git repository&quot; aria-label=&quot;Git repository&quot;&gt;
+                        &lt;i id=&quot;git-repository-button&quot; class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            
+            &lt;div id=&quot;search-wrapper&quot; class=&quot;hidden&quot;&gt;
+                &lt;form id=&quot;searchbar-outer&quot; class=&quot;searchbar-outer&quot;&gt;
+                    &lt;input type=&quot;search&quot; name=&quot;search&quot; id=&quot;searchbar&quot; name=&quot;searchbar&quot; placeholder=&quot;Search this book ...&quot; aria-controls=&quot;searchresults-outer&quot; aria-describedby=&quot;searchresults-header&quot;&gt;
+                &lt;/form&gt;
+                &lt;div id=&quot;searchresults-outer&quot; class=&quot;searchresults-outer hidden&quot;&gt;
+                    &lt;div id=&quot;searchresults-header&quot; class=&quot;searchresults-header&quot;&gt;&lt;/div&gt;
+                    &lt;ul id=&quot;searchresults&quot;&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+
+            &lt;!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM --&gt;
+            &lt;script type=&quot;text/javascript&quot;&gt;
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            &lt;/script&gt;
+
+            &lt;div id=&quot;content&quot; class=&quot;content&quot;&gt;
+                &lt;main&gt;
+                    &lt;h1 id=&quot;introduction-to-git&quot;&gt;&lt;a class=&quot;header&quot; href=&quot;#introduction-to-git&quot;&gt;Introduction to Git&lt;/a&gt;&lt;/h1&gt;
+</code></pre>
 <p>What is Git? Git is a version control program that is used in many organizations to help organize, 
 track changes &amp; control various versions of a project. As said before, a version control program 
 essentially tracks the changes made in files in a project. It is a very important skill to learn, and an excellent 
@@ -183,17 +345,78 @@ was used as the official version control program for the Linux Kernel, and is ma
 <p>Mac: <code># git --version</code></p>
 <p>Debian Linux: <code># apt-get install git-all</code></p>
 <p>Visit <a href="https://git-scm.com/download/">here</a> for more download information!!!</p>
+<pre><code>                &lt;/main&gt;
+
+                &lt;nav class=&quot;nav-wrapper&quot; aria-label=&quot;Page navigation&quot;&gt;
+                    &lt;!-- Mobile navigation buttons --&gt;
+                    
+
+                    
+                        &lt;a rel=&quot;next&quot; href=&quot;01.html&quot; class=&quot;mobile-nav-chapters next&quot; title=&quot;Next chapter&quot; aria-label=&quot;Next chapter&quot; aria-keyshortcuts=&quot;Right&quot;&gt;
+                            &lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    
+
+                    &lt;div style=&quot;clear: both&quot;&gt;&lt;/div&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;nav class=&quot;nav-wide-wrapper&quot; aria-label=&quot;Page navigation&quot;&gt;
+            
+
+            
+                &lt;a rel=&quot;next&quot; href=&quot;01.html&quot; class=&quot;nav-chapters next&quot; title=&quot;Next chapter&quot; aria-label=&quot;Next chapter&quot; aria-keyshortcuts=&quot;Right&quot;&gt;
+                    &lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            
+        &lt;/nav&gt;
+
+    &lt;/div&gt;
+
+    
+
+    
+
+    
+
+    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        window.playground_copyable = true;
+    &lt;/script&gt;
+    
+
+    
+
+    
+    &lt;script src=&quot;elasticlunr.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;mark.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;searcher.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    
+
+    &lt;script src=&quot;clipboard.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;highlight.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;book.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Custom JS scripts --&gt;
+    
+
+    
+
+&lt;/body&gt;
+</code></pre>
+</html>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-
-                        
-                            <a rel="next" href="01.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
                         
 
                         <div style="clear: both"></div>
@@ -203,11 +426,11 @@ was used as the official version control program for the Linux Kernel, and is ma
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-
-                
-                    <a rel="next" href="01.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+                
+
                 
             </nav>
 
@@ -228,14 +451,14 @@ was used as the official version control program for the Linux Kernel, and is ma
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
