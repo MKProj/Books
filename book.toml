@@ -6,5 +6,5 @@ src = "src"
 title = "MKProject-Books"
 
 [output.html]
-site-url = "/book/"
+site-url = "./book/"
 cname = "book.mkproj.com"
